@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c78im0mc8nei"]
 
 [ext_resource type="Script" uid="uid://7soi5s0m23ar" path="res://Button1.cs" id="1_om433"]
+[ext_resource type="Script" uid="uid://dfabegvv0h5d" path="res://Enemy.cs" id="2_gfoop"]
+[ext_resource type="Script" uid="uid://brbm7bsoh6f0u" path="res://Button2000.cs" id="3_dy17d"]
 
 [node name="Node2D" type="Node2D" unique_id=1303038940]
 
@@ -14,6 +16,19 @@ text = "просто кнопка
 script = ExtResource("1_om433")
 
 [node name="Node2D" type="Node2D" parent="Button" unique_id=1354639923]
-position = Vector2(84, -46)
+position = Vector2(644, 27)
 
 [node name="Node" type="Node" parent="Button/Node2D" unique_id=214638237]
+
+[node name="Enemy" type="Node2D" parent="Button/Node2D" unique_id=129301880]
+script = ExtResource("2_gfoop")
+
+[node name="Damage Button" type="Button" parent="Button" unique_id=1776825003 node_paths=PackedStringArray("TargetEnemy")]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 8.0
+offset_right = 560.0
+offset_bottom = 173.0
+text = "ПРОСТО КНОПКА 2000!"
+script = ExtResource("3_dy17d")
+TargetEnemy = NodePath("../Node2D/Enemy")

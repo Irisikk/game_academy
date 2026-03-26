@@ -1,3 +1,5 @@
 res://node_2d2.tscn
 res://Button1.cs
 res://MeshInstance2d2.cs
+res://Button2000.cs
+res://Enemy.cs

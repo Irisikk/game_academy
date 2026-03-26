@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("comeshotacademy3d")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2025b74d057bd48636c82250a23fb16885416d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ab55129b896223fdca53bd7f6d6c510d5d92f69")]
 [assembly: System.Reflection.AssemblyProductAttribute("comeshotacademy3d")]
 [assembly: System.Reflection.AssemblyTitleAttribute("comeshotacademy3d")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
