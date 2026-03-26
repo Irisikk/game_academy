@@ -88,19 +88,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mmtbr\\.nuget\\packages\\": {}
+    "C:\\Users\\1369553\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\project\\comeshotacademy3d\\comeshotacademy3d.csproj",
+      "projectUniqueName": "C:\\Users\\1369553\\Documents\\GitHub\\comeshotacademy3d\\comeshotacademy3d.csproj",
       "projectName": "comeshotacademy3d",
-      "projectPath": "C:\\project\\comeshotacademy3d\\comeshotacademy3d.csproj",
-      "packagesPath": "C:\\Users\\mmtbr\\.nuget\\packages\\",
-      "outputPath": "C:\\project\\comeshotacademy3d\\.godot\\mono\\temp\\obj\\",
+      "projectPath": "C:\\Users\\1369553\\Documents\\GitHub\\comeshotacademy3d\\comeshotacademy3d.csproj",
+      "packagesPath": "C:\\Users\\1369553\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\1369553\\Documents\\GitHub\\comeshotacademy3d\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mmtbr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\1369553\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
