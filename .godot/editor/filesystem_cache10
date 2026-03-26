@@ -1,0 +1,6 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1774537988
+icon.svg::CompressedTexture2D::2813760218798097164::1774294520::1774537676::1::::<><><>0<>0<>987edf10ce3bc7e24cbc24592595996f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+MeshInstance2d2.cs::CSharpScript::3657217022786961055::1774294520::0::1::::<><><>0<>0<><>::
+mesh_instance_2d.gd::GDScript::4613765518158776503::1774294520::0::1::::<>MeshInstance2D<><>0<>0<><>::
+node_2d.tscn::PackedScene::4159259067980536440::1774294520::0::1::::<><><>0<>0<><>::uid://b6y7bq4s175a6::::res://mesh_instance_2d.gd<>uid://bsdt3hr4jkved::::res://MeshInstance2d2.cs
