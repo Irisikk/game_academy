@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c78im0mc8nei"]
 
+[ext_resource type="Script" uid="uid://7soi5s0m23ar" path="res://Button1.cs" id="1_om433"]
+
 [node name="Node2D" type="Node2D" unique_id=1303038940]
 
 [node name="Button" type="Button" parent="." unique_id=770358572]
@@ -9,3 +11,9 @@ offset_right = 369.75
 offset_bottom = 231.75
 text = "просто кнопка
 "
+script = ExtResource("1_om433")
+
+[node name="Node2D" type="Node2D" parent="Button" unique_id=1354639923]
+position = Vector2(84, -46)
+
+[node name="Node" type="Node" parent="Button/Node2D" unique_id=214638237]
