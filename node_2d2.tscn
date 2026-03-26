@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c78im0mc8nei"]
+
+[node name="Node2D" type="Node2D" unique_id=1303038940]
+
+[node name="Button" type="Button" parent="." unique_id=770358572]
+offset_left = 94.0
+offset_top = 66.0
+offset_right = 369.75
+offset_bottom = 231.75
+text = "просто кнопка
+"
