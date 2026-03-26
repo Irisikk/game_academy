@@ -1,12 +1,12 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774547400
+::res://::1774547833
 mesh_instance_2d.gd::GDScript::4613765518158776503::1774294520::0::1::::<>MeshInstance2D<><>0<>0<><>::
-node_2d2.tscn::PackedScene::208456391968032172::1774547359::0::1::::<><><>0<>0<><>::uid://7soi5s0m23ar::::res://тестовые скрипты/Button1.cs<>uid://dfabegvv0h5d::::res://тестовые скрипты/Enemy.cs<>uid://brbm7bsoh6f0u::::res://тестовые скрипты/Button2000.cs
-node_2d.tscn::PackedScene::4159259067980536440::1774547400::0::1::::<><><>0<>0<><>::uid://b6y7bq4s175a6::::res://mesh_instance_2d.gd<>uid://bsdt3hr4jkved::::res://MeshInstance2d2.cs
-::res://тестовые скрипты/::1774547380
-Button1.cs::CSharpScript::2284067724900080953::1774544366::0::1::::<><><>0<>0<><>::
-Button2000.cs::CSharpScript::3582481233588370594::1774546652::0::1::::<><><>0<>0<><>::
-Enemy.cs::CSharpScript::220890425823726675::1774545662::0::1::::<><><>0<>0<><>::
-MeshInstance2d2.cs::CSharpScript::3657217022786961055::1774294520::0::1::::<><><>0<>0<><>::
-::res://хз что это/::1774547400
-icon.svg::CompressedTexture2D::2813760218798097164::1774294520::1774547384::1::::<><><>0<>0<>ff148a69b776e5655497d689dd16e960<>res://.godot/imported/icon.svg-5f1b481a0e582ecb6d7fe6f30c20cb55.ctex::
+node_2d2.tscn::PackedScene::208456391968032172::1774547833::0::1::::<><><>0<>0<><>::uid://7soi5s0m23ar::::res://тестовые скрипты/Button1.cs<>uid://dfabegvv0h5d::::res://тестовые скрипты/Enemy.cs<>uid://brbm7bsoh6f0u::::res://тестовые скрипты/Button2000.cs
+node_2d.tscn::PackedScene::4159259067980536440::1774547833::0::1::::<><><>0<>0<><>::uid://b6y7bq4s175a6::::res://mesh_instance_2d.gd<>uid://bsdt3hr4jkved::::res://тестовые скрипты/MeshInstance2d2.cs
+::res://тестовые скрипты/::1774547833
+Button1.cs::CSharpScript::2284067724900080953::1774547833::0::1::::<><><>0<>0<><>::
+Button2000.cs::CSharpScript::3582481233588370594::1774547833::0::1::::<><><>0<>0<><>::
+Enemy.cs::CSharpScript::220890425823726675::1774547833::0::1::::<><><>0<>0<><>::
+MeshInstance2d2.cs::CSharpScript::3657217022786961055::1774547833::0::1::::<><><>0<>0<><>::
+::res://хз что это/::1774547833
+icon.svg::CompressedTexture2D::2813760218798097164::1774547833::1774547861::1::::<><><>0<>0<>ff148a69b776e5655497d689dd16e960<>res://.godot/imported/icon.svg-5f1b481a0e582ecb6d7fe6f30c20cb55.ctex::
