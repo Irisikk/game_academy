@@ -120,12 +120,11 @@ script = ExtResource("2_epypp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1442327648]
 texture_filter = 1
-position = Vector2(333.0001, 69)
-scale = Vector2(15.703125, 3.9999998)
+position = Vector2(157.87505, 69)
+scale = Vector2(4.7578096, 3.9999998)
 sprite_frames = SubResource("SpriteFrames_x0ka3")
 animation = &"idle"
 autoplay = "idle"
 script = ExtResource("4_q6r6c")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=341469088]
-position = Vector2(6.4318347, 53.5)
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D" unique_id=1882871586]
