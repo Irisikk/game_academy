@@ -3,47 +3,51 @@ using System;
 
 public partial class anime123 : AnimatedSprite2D
 {   
-    [Export]
-    public float Speed = 400.0f;
+    [Export] public int TileSize = 16;
+    [Export] public float Speed = 300.0f;
 
-    private AnimatedSprite2D _animationSprite;
+    private Vector2 _targetPosition;
+    private bool _isMoving = false;
 
     public override void _Ready()
     {
-        
-        _animationSprite = this;
+        Position = Position.Snapped(new Vector2(TileSize, TileSize));
+        _targetPosition = Position;
     }
 
     public override void _Process(double delta)
     {
-        Vector2 velocity = Vector2.Zero;
-
-        if (Input.IsActionPressed("moverightTEST")) velocity.X += 1;
-        if (Input.IsActionPressed("moveleftTEST"))  velocity.X -= 1;
-        if (Input.IsActionPressed("movedownTEST"))  velocity.Y += 1;
-        if (Input.IsActionPressed("moveupTEST"))    velocity.Y -= 1;
-
-        if (velocity.Length() > 0)
+        if (!_isMoving)
         {
-           
-            velocity = velocity.Normalized() * Speed;
-            
-            
-            _animationSprite.Play("right");
-            
-            
-            if (velocity.X != 0)
+            Vector2 inputDir = Vector2.Zero;
+
+            if (Input.IsActionPressed("moverightTEST")) inputDir.X = 1;
+            else if (Input.IsActionPressed("moveleftTEST"))  inputDir.X = -1;
+            else if (Input.IsActionPressed("movedownTEST"))  inputDir.Y = 1;
+            else if (Input.IsActionPressed("moveupTEST"))    inputDir.Y = -1;
+
+            if (inputDir != Vector2.Zero)
             {
-                _animationSprite.FlipH = velocity.X < 0;
+                _targetPosition = Position + inputDir * TileSize;
+                _isMoving = true;
+                
+                Play("right"); 
+                if (inputDir.X != 0) FlipH = inputDir.X < 0;
+            }
+            else 
+            {
+                Play("idle");
             }
         }
         else
         {
-        
-            _animationSprite.Play("idle");
-        }
+            Position = Position.MoveToward(_targetPosition, Speed * (float)delta);
 
-        
-        Position += velocity * (float)delta;
+            if (Position.DistanceTo(_targetPosition) < 0.1f)
+            {
+                Position = _targetPosition;
+                _isMoving = false;
+            }
+        }
     }
 }
