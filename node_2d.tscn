@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://b0i1nh5duvmd1"]
 
 [ext_resource type="Texture2D" uid="uid://bgdahp8n3kq0k" path="res://icon.svg" id="1_0e48y"]
-[ext_resource type="Script" uid="uid://i01ta2yj73xr" path="res://TESTMOVEMENT.cs" id="2_epypp"]
+[ext_resource type="Script" uid="uid://i01ta2yj73xr" path="res://Testmovement.cs" id="2_epypp"]
 
 [node name="Node2D" type="Node2D" unique_id=1303116703]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2018704872]
-position = Vector2(306.68753, 180.62502)
-scale = Vector2(2.0673826, 1.7871095)
+position = Vector2(231.68755, 115.625)
+scale = Vector2(0.8955075, 0.7246094)
 texture = ExtResource("1_0e48y")
 script = ExtResource("2_epypp")
