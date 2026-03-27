@@ -1,8 +1,8 @@
 using Godot;
 using System;
 
-public partial class anime123 : AnimatedSprite2D
-{   
+public partial class SEcondPlayyer : AnimatedSprite2D
+{
     [Export]
     public float Speed = 400.0f;
 
@@ -19,10 +19,10 @@ public partial class anime123 : AnimatedSprite2D
         Vector2 velocity = Vector2.Zero;
 
         // Сбор ввода
-        if (Input.IsActionPressed("moverightTEST")) velocity.X += 1;
-        if (Input.IsActionPressed("moveleftTEST"))  velocity.X -= 1;
-        if (Input.IsActionPressed("movedownTEST"))  velocity.Y += 1;
-        if (Input.IsActionPressed("moveupTEST"))    velocity.Y -= 1;
+        if (Input.IsActionPressed("fright")) velocity.X += 1;
+        if (Input.IsActionPressed("fleft"))  velocity.X -= 1;
+        if (Input.IsActionPressed("fdown"))  velocity.Y += 1;
+        if (Input.IsActionPressed("fup"))    velocity.Y -= 1;
 
         if (velocity.Length() > 0)
         {
