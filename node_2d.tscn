@@ -222,5 +222,3 @@ sprite_frames = SubResource("SpriteFrames_fs4d3")
 animation = &"right"
 autoplay = "idle"
 script = ExtResource("1_rj586")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1450512402]
