@@ -68,7 +68,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 15.0
+"speed": 5.0
 }, {
 "frames": [],
 "loop": true,
@@ -101,7 +101,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"right",
-"speed": 15.0
+"speed": 5.0
 }, {
 "frames": [],
 "loop": true,
@@ -110,22 +110,21 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D" unique_id=1303116703]
+position = Vector2(0, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2018704872]
-visible = false
-position = Vector2(231.68755, 115.625)
-scale = Vector2(0.8955075, 0.7246094)
+position = Vector2(531, 286)
+scale = Vector2(6.4843755, 3.640625)
 texture = ExtResource("1_0e48y")
 script = ExtResource("2_epypp")
+Speed = 0.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1442327648]
 texture_filter = 1
-position = Vector2(333.0001, 69)
-scale = Vector2(15.703125, 3.9999998)
+position = Vector2(388.59375, 300.5)
+scale = Vector2(6.462891, 7.28125)
 sprite_frames = SubResource("SpriteFrames_x0ka3")
-animation = &"idle"
+animation = &"right"
 autoplay = "idle"
 script = ExtResource("4_q6r6c")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=341469088]
-position = Vector2(6.4318347, 53.5)
+Speed = 100.0
