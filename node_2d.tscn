@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b0i1nh5duvmd1"]
 
 [ext_resource type="Texture2D" uid="uid://bgdahp8n3kq0k" path="res://icon.svg" id="1_0e48y"]
+[ext_resource type="PackedScene" path="res://map_test.tscn" id="1_kdubu"]
 [ext_resource type="Script" uid="uid://i01ta2yj73xr" path="res://Testmovement.cs" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://dia4mi0ah713l" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Pink_Monster_Run_6.png" id="3_0hol4"]
 [ext_resource type="Texture2D" uid="uid://bdjx8mhs5sy1" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Pink_Monster_Idle_4.png" id="3_q6r6c"]
@@ -112,6 +113,9 @@ animations = [{
 [node name="Node2D" type="Node2D" unique_id=1303116703]
 position = Vector2(0, -5)
 
+[node name="MapTest" parent="." unique_id=231699221 instance=ExtResource("1_kdubu")]
+position = Vector2(-8, 6)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2018704872]
 visible = false
 position = Vector2(531, 286)
@@ -122,9 +126,10 @@ Speed = 0.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1442327648]
 texture_filter = 1
-position = Vector2(632.00006, 188)
-scale = Vector2(3.8251965, 3.7343752)
+position = Vector2(584, 221.00002)
+scale = Vector2(0.5953373, 0.30468822)
 sprite_frames = SubResource("SpriteFrames_x0ka3")
 animation = &"right"
 autoplay = "idle"
 script = ExtResource("4_q6r6c")
+Speed = 100.0
