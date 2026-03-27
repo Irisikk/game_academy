@@ -3,114 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bgdahp8n3kq0k" path="res://icon.svg" id="1_0e48y"]
 [ext_resource type="Script" uid="uid://db13uth8worh0" path="res://monster_penis.gd" id="1_rj586"]
 [ext_resource type="Script" uid="uid://i01ta2yj73xr" path="res://Testmovement.cs" id="2_epypp"]
-[ext_resource type="Texture2D" uid="uid://dia4mi0ah713l" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Pink_Monster_Run_6.png" id="3_0hol4"]
-[ext_resource type="Texture2D" uid="uid://bdjx8mhs5sy1" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Pink_Monster_Idle_4.png" id="3_q6r6c"]
-[ext_resource type="Script" uid="uid://tsl110g0dapi" path="res://anime123.cs" id="4_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://dvkc3301krk40" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/3 Dude_Monster/Dude_Monster_Idle_4.png" id="6_kdubu"]
 [ext_resource type="Texture2D" uid="uid://bkwk4fd7i60wa" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/3 Dude_Monster/Dude_Monster_Run_6.png" id="7_rj586"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x0ka3"]
-atlas = ExtResource("3_q6r6c")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0h7mo"]
-atlas = ExtResource("3_q6r6c")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nr8wp"]
-atlas = ExtResource("3_q6r6c")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d2bti"]
-atlas = ExtResource("3_q6r6c")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
-atlas = ExtResource("3_0hol4")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
-atlas = ExtResource("3_0hol4")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
-atlas = ExtResource("3_0hol4")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
-atlas = ExtResource("3_0hol4")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ir8iy"]
-atlas = ExtResource("3_0hol4")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hqns4"]
-atlas = ExtResource("3_0hol4")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_x0ka3"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x0ka3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0h7mo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nr8wp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d2bti")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 10.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"left",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kdubu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d21ai")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rj586")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4d7sh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ir8iy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hqns4")
-}],
-"loop": true,
-"name": &"right",
-"speed": 15.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"up",
-"speed": 5.0
-}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ta5nu"]
 atlas = ExtResource("6_kdubu")
@@ -204,15 +98,6 @@ position = Vector2(231.68755, 115.625)
 scale = Vector2(0.8955075, 0.7246094)
 texture = ExtResource("1_0e48y")
 script = ExtResource("2_epypp")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1442327648 groups=["playerrrr"]]
-texture_filter = 1
-position = Vector2(333.0001, 69)
-scale = Vector2(15.703125, 3.9999998)
-sprite_frames = SubResource("SpriteFrames_x0ka3")
-animation = &"right"
-autoplay = "idle"
-script = ExtResource("4_q6r6c")
 
 [node name="SEcondPlayyer" type="AnimatedSprite2D" parent="." unique_id=1725749575]
 texture_filter = 1
