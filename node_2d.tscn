@@ -1,22 +1,12 @@
 [gd_scene format=3 uid="uid://b0i1nh5duvmd1"]
 
-[ext_resource type="Script" uid="uid://b6y7bq4s175a6" path="res://mesh_instance_2d.gd" id="1_0e48y"]
-[ext_resource type="Script" uid="uid://bsdt3hr4jkved" path="res://MeshInstance2d2.cs" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://bgdahp8n3kq0k" path="res://icon.svg" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://i01ta2yj73xr" path="res://TESTMOVEMENT.cs" id="2_epypp"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_0hol4"]
+[node name="Node2D" type="Node2D" unique_id=1303116703]
 
-[sub_resource type="BoxMesh" id="BoxMesh_q6r6c"]
-
-[node name="Node2D" type="Node2D" unique_id=435421898]
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=557436074]
-position = Vector2(201, 281)
-scale = Vector2(163.5, 170.5)
-mesh = SubResource("BoxMesh_0hol4")
-script = ExtResource("1_0e48y")
-
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=481009830]
-position = Vector2(579.00006, 181)
-scale = Vector2(104.49999, 94.5)
-mesh = SubResource("BoxMesh_q6r6c")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2018704872]
+position = Vector2(306.68753, 180.62502)
+scale = Vector2(2.0673826, 1.7871095)
+texture = ExtResource("1_0e48y")
 script = ExtResource("2_epypp")
