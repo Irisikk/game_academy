@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://tsl110g0dapi" path="res://anime123.cs" id="4_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://7umsng385n8d" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/2 Owlet_Monster/Owlet_Monster_Run_6.png" id="5_ir8iy"]
 [ext_resource type="Script" uid="uid://bve4o331h3xm3" path="res://Enemy.cs" id="6_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://dvkc3301krk40" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/3 Dude_Monster/Dude_Monster_Idle_4.png" id="7_hqns4"]
+[ext_resource type="Texture2D" uid="uid://bkwk4fd7i60wa" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/3 Dude_Monster/Dude_Monster_Run_6.png" id="8_x0ka3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ta5nu"]
 atlas = ExtResource("4_4d7sh")
@@ -87,6 +89,89 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bjha6")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt76g"]
+atlas = ExtResource("7_hqns4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fr6y"]
+atlas = ExtResource("7_hqns4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hxjc"]
+atlas = ExtResource("7_hqns4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebxd8"]
+atlas = ExtResource("7_hqns4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u7jv"]
+atlas = ExtResource("8_x0ka3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24dk6"]
+atlas = ExtResource("8_x0ka3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mryly"]
+atlas = ExtResource("8_x0ka3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq1c5"]
+atlas = ExtResource("8_x0ka3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ornx7"]
+atlas = ExtResource("8_x0ka3")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnnru"]
+atlas = ExtResource("8_x0ka3")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_540hr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt76g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fr6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hxjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebxd8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u7jv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24dk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mryly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq1c5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ornx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnnru")
 }],
 "loop": true,
 "name": &"walk",
@@ -210,7 +295,7 @@ script = ExtResource("2_epypp")
 
 [node name="Enemy" type="AnimatedSprite2D" parent="." unique_id=940339261 node_paths=PackedStringArray("Player")]
 texture_filter = 1
-position = Vector2(577, 207.00002)
+position = Vector2(577, 206)
 scale = Vector2(0.375, 0.40625)
 sprite_frames = SubResource("SpriteFrames_gt76g")
 animation = &"idle"
@@ -218,9 +303,19 @@ script = ExtResource("6_4d7sh")
 Speed = 10.0
 Player = NodePath("../Player")
 
+[node name="Enemy2" type="AnimatedSprite2D" parent="." unique_id=318805974 node_paths=PackedStringArray("Player")]
+texture_filter = 1
+position = Vector2(560, 206)
+scale = Vector2(0.375, 0.40625)
+sprite_frames = SubResource("SpriteFrames_540hr")
+animation = &"walk"
+script = ExtResource("6_4d7sh")
+Speed = 10.0
+Player = NodePath("../Player")
+
 [node name="Player" type="AnimatedSprite2D" parent="." unique_id=1442327648]
 texture_filter = 1
-position = Vector2(577, 224)
+position = Vector2(577, 223)
 scale = Vector2(0.39883366, 0.3398435)
 sprite_frames = SubResource("SpriteFrames_x0ka3")
 animation = &"idle"
