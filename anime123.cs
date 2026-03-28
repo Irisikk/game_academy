@@ -3,7 +3,12 @@ using System;
 
 public partial class anime123 : AnimatedSprite2D
 {   
+
+    [ExportCategory("Test")]
+    [ExportGroup("Movement_Settings")]
+    [ExportSubgroup("Tile_Size")]
     [Export] public int TileSize = 16;
+    [ExportSubgroup("Speed")]
     [Export] public float Speed = 300.0f;
 
     private Vector2 _targetPosition;

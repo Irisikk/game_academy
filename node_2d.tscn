@@ -1,11 +1,97 @@
 [gd_scene format=3 uid="uid://b0i1nh5duvmd1"]
 
 [ext_resource type="Texture2D" uid="uid://bgdahp8n3kq0k" path="res://icon.svg" id="1_0e48y"]
-[ext_resource type="PackedScene" path="res://map_test.tscn" id="1_kdubu"]
+[ext_resource type="PackedScene" uid="uid://dut8sjt63a3qs" path="res://map_test.tscn" id="1_kdubu"]
 [ext_resource type="Script" uid="uid://i01ta2yj73xr" path="res://Testmovement.cs" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://dia4mi0ah713l" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Pink_Monster_Run_6.png" id="3_0hol4"]
 [ext_resource type="Texture2D" uid="uid://bdjx8mhs5sy1" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Pink_Monster_Idle_4.png" id="3_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://cc0ns33qfw6vh" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/2 Owlet_Monster/Owlet_Monster_Idle_4.png" id="4_4d7sh"]
 [ext_resource type="Script" uid="uid://tsl110g0dapi" path="res://anime123.cs" id="4_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://7umsng385n8d" path="res://craftpix-net-622999-free-pixel-art-tiny-hero-sprites/2 Owlet_Monster/Owlet_Monster_Run_6.png" id="5_ir8iy"]
+[ext_resource type="Script" uid="uid://bve4o331h3xm3" path="res://Enemy.cs" id="6_4d7sh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta5nu"]
+atlas = ExtResource("4_4d7sh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flf07"]
+atlas = ExtResource("4_4d7sh")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k73cj"]
+atlas = ExtResource("4_4d7sh")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjqkl"]
+atlas = ExtResource("4_4d7sh")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs4d3"]
+atlas = ExtResource("5_ir8iy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vxoj"]
+atlas = ExtResource("5_ir8iy")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei405"]
+atlas = ExtResource("5_ir8iy")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8dv2"]
+atlas = ExtResource("5_ir8iy")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nhjh"]
+atlas = ExtResource("5_ir8iy")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjha6"]
+atlas = ExtResource("5_ir8iy")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gt76g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta5nu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flf07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k73cj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjqkl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs4d3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vxoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei405")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8dv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nhjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjha6")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0ka3"]
 atlas = ExtResource("3_q6r6c")
@@ -111,7 +197,6 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D" unique_id=1303116703]
-position = Vector2(0, -5)
 
 [node name="MapTest" parent="." unique_id=231699221 instance=ExtResource("1_kdubu")]
 position = Vector2(-8, 6)
@@ -122,14 +207,27 @@ position = Vector2(531, 286)
 scale = Vector2(6.4843755, 3.640625)
 texture = ExtResource("1_0e48y")
 script = ExtResource("2_epypp")
-Speed = 0.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1442327648]
+[node name="Enemy" type="AnimatedSprite2D" parent="." unique_id=940339261 node_paths=PackedStringArray("Player")]
 texture_filter = 1
-position = Vector2(584, 221.00002)
-scale = Vector2(0.5953373, 0.30468822)
+position = Vector2(577, 207.00002)
+scale = Vector2(0.375, 0.40625)
+sprite_frames = SubResource("SpriteFrames_gt76g")
+animation = &"idle"
+script = ExtResource("6_4d7sh")
+Speed = 10.0
+Player = NodePath("../Player")
+
+[node name="Player" type="AnimatedSprite2D" parent="." unique_id=1442327648]
+texture_filter = 1
+position = Vector2(577, 224)
+scale = Vector2(0.39883366, 0.3398435)
 sprite_frames = SubResource("SpriteFrames_x0ka3")
-animation = &"right"
+animation = &"idle"
 autoplay = "idle"
 script = ExtResource("4_q6r6c")
-Speed = 100.0
+Speed = 30.0
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=862550676]
+scale = Vector2(1.6797202, 3.2820435)
+zoom = Vector2(10, 10)
