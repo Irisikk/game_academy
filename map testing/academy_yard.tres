@@ -1,0 +1,25 @@
+[gd_resource type="TileSet" format=3 uid="uid://srclq80w2eoa"]
+
+[ext_resource type="Texture2D" uid="uid://bbugj5vs4fl1k" path="res://map testing/map_tiles.png" id="1_2ld03"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xt6lm"]
+texture = ExtResource("1_2ld03")
+0:0/0 = 0
+1:0/size_in_atlas = Vector2i(1, 4)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, 24)
+2:1/size_in_atlas = Vector2i(1, 3)
+2:1/0 = 0
+2:1/0/texture_origin = Vector2i(0, 16)
+3:0/size_in_atlas = Vector2i(1, 4)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, 24)
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+
+[resource]
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/1 = SubResource("TileSetAtlasSource_xt6lm")
