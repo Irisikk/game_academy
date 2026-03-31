@@ -15,6 +15,8 @@ public partial class Enemy : AnimatedSprite2D
     {
         Position = Position.Snapped(new Vector2(TileSize, TileSize));
         _targetPosition = Position;
+        
+        AddToGroup("Enemy");
     }
 
     public override void _Process(double delta)
@@ -61,7 +63,7 @@ public partial class Enemy : AnimatedSprite2D
         
             Vector2 snappedPlayerPos = Player.Position.Snapped(new Vector2(TileSize, TileSize));
             
-            if (nextStep != snappedPlayerPos)
+            if (nextStep != snappedPlayerPos && !IsTileOccupied(nextStep))
             {
                 _targetPosition = nextStep;
                 _isMoving = true;
@@ -76,5 +78,18 @@ public partial class Enemy : AnimatedSprite2D
                 Play("idle");
             }
         }
+    }
+
+    private bool IsTileOccupied(Vector2 targetPos)
+    {
+        var enemies = GetTree().GetNodesInGroup("Enemy");
+        foreach (Node2D enemy in enemies)
+        {
+            if (enemy != this && enemy.Position.DistanceTo(targetPos) < 1.0f)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

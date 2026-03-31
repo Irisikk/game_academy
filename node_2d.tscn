@@ -95,6 +95,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqns4"]
+size = Vector2(26.666687, 27.153854)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_gt76g"]
 atlas = ExtResource("7_hqns4")
 region = Rect2(0, 0, 32, 32)
@@ -177,6 +180,12 @@ animations = [{
 "name": &"walk",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0ka3"]
+size = Vector2(23.999893, 27.07692)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0h7mo"]
+size = Vector2(20.666626, 24.769257)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0ka3"]
 atlas = ExtResource("3_q6r6c")
@@ -281,10 +290,13 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nr8wp"]
+size = Vector2(25.07306, 29.425323)
+
 [node name="Node2D" type="Node2D" unique_id=1303116703]
 
 [node name="MapTest" parent="." unique_id=231699221 instance=ExtResource("1_kdubu")]
-position = Vector2(-8, 6)
+position = Vector2(-8, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2018704872]
 visible = false
@@ -303,6 +315,15 @@ script = ExtResource("6_4d7sh")
 Speed = 10.0
 Player = NodePath("../Player")
 
+[node name="RayCast2D" type="RayCast2D" parent="Enemy" unique_id=18013071]
+target_position = Vector2(0, 27.076935)
+
+[node name="Area2D" type="Area2D" parent="Enemy" unique_id=2007845778]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D" unique_id=1238394269]
+position = Vector2(0, 3.730774)
+shape = SubResource("RectangleShape2D_hqns4")
+
 [node name="Enemy2" type="AnimatedSprite2D" parent="." unique_id=318805974 node_paths=PackedStringArray("Player")]
 texture_filter = 1
 position = Vector2(560, 206)
@@ -313,9 +334,37 @@ script = ExtResource("6_4d7sh")
 Speed = 10.0
 Player = NodePath("../Player")
 
+[node name="RayCast2D" type="RayCast2D" parent="Enemy2" unique_id=1406780807]
+target_position = Vector2(0, 27.076935)
+
+[node name="Area2D" type="Area2D" parent="Enemy2" unique_id=958578163]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2/Area2D" unique_id=1583869580]
+position = Vector2(1.333374, 1.2307739)
+shape = SubResource("RectangleShape2D_x0ka3")
+
+[node name="Enemy3" type="AnimatedSprite2D" parent="." unique_id=420927182 node_paths=PackedStringArray("Player")]
+texture_filter = 1
+position = Vector2(592, 206)
+scale = Vector2(0.375, 0.40625)
+sprite_frames = SubResource("SpriteFrames_540hr")
+animation = &"walk"
+script = ExtResource("6_4d7sh")
+Speed = 10.0
+Player = NodePath("../Player")
+
+[node name="Area2D" type="Area2D" parent="Enemy3" unique_id=144941636]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3/Area2D" unique_id=1594263092]
+position = Vector2(0.33325195, 2.384613)
+shape = SubResource("RectangleShape2D_0h7mo")
+
+[node name="RayCast2D" type="RayCast2D" parent="Enemy3" unique_id=488349433]
+target_position = Vector2(0, 27.076935)
+
 [node name="Player" type="AnimatedSprite2D" parent="." unique_id=1442327648]
 texture_filter = 1
-position = Vector2(577, 223)
+position = Vector2(592, 223)
 scale = Vector2(0.39883366, 0.3398435)
 sprite_frames = SubResource("SpriteFrames_x0ka3")
 animation = &"idle"
@@ -326,3 +375,9 @@ Speed = 30.0
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=862550676]
 scale = Vector2(1.6797202, 3.2820435)
 zoom = Vector2(10, 10)
+
+[node name="Area2D" type="Area2D" parent="Player" unique_id=407366978]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D" unique_id=345102300]
+position = Vector2(3.0517578e-05, 2.9425497)
+shape = SubResource("RectangleShape2D_nr8wp")
