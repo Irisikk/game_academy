@@ -196,3 +196,4 @@ scale = Vector2(17.984375, 17.984375)
 texture = ExtResource("6_b6kvq")
 
 [connection signal="area_entered" from="Node2D2/Building1/Area2D" to="Node2D2/Building1/Area2D" method="OnAreaEntered"]
+[connection signal="area_exited" from="Node2D2/Building1/Area2D" to="Node2D2/Building1/Area2D" method="OnAreaExited"]
