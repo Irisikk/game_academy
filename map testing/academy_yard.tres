@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://srclq80w2eoa"]
 
-[ext_resource type="Texture2D" uid="uid://bbugj5vs4fl1k" path="res://map testing/map_tiles.png" id="1_2ld03"]
+[ext_resource type="Texture2D" uid="uid://8ldsgxyrub81" path="res://map testing/map_tiles.png" id="1_2ld03"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xt6lm"]
 texture = ExtResource("1_2ld03")
@@ -17,6 +17,7 @@ texture = ExtResource("1_2ld03")
 0:1/0 = 0
 0:2/0 = 0
 0:3/0 = 0
+4:0/0 = 0
 
 [resource]
 terrain_set_0/mode = 0
