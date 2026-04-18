@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://3n7hvt8olac6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ajumg"]
+font_size = 64
+
+[node name="Plug" type="Node2D" unique_id=1453282546]
+
+[node name="Label" type="Label" parent="." unique_id=761983562]
+offset_left = 259.0
+offset_top = 47.0
+offset_right = 962.0
+offset_bottom = 590.0
+text = "Тута это
+Тута заглушка
+Чтобы было хо-ро-шо
+ВСЁ БУДЕТ ХОРОШО 
+ВСЁ БУДЕТ ХОРОШО
+И Я ЭТО ЗНАЮ"
+label_settings = SubResource("LabelSettings_ajumg")

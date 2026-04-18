@@ -42,10 +42,11 @@ position = Vector2(3990.0002, 1072)
 scale = Vector2(17.984375, 17.984375)
 texture = ExtResource("6_b6kvq")
 
-[node name="Area2D" type="Area2D" parent="Node2D2/Building1" unique_id=1591743687]
+[node name="Entry" type="Area2D" parent="Node2D2/Building1" unique_id=1591743687]
 script = ExtResource("7_vgjsw")
+pathtosome = "res://map testing/scenes/intern_academy.tscn"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Building1/Area2D" unique_id=792342997]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Building1/Entry" unique_id=792342997]
 position = Vector2(0, 22.185928)
 shape = SubResource("RectangleShape2D_x6i5u")
 
@@ -55,6 +56,13 @@ texture_filter = 1
 position = Vector2(6492, 1072)
 scale = Vector2(17.984375, 17.984375)
 texture = ExtResource("6_b6kvq")
+
+[node name="Entry" type="Area2D" parent="Node2D2/Building4" unique_id=538162673]
+script = ExtResource("7_vgjsw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/Building4/Entry" unique_id=233393029]
+position = Vector2(0, 22.185928)
+shape = SubResource("RectangleShape2D_x6i5u")
 
 [node name="Building2" type="Sprite2D" parent="Node2D2" unique_id=1073045525]
 z_index = 1
@@ -72,5 +80,7 @@ rotation = 3.1415925
 scale = Vector2(17.984375, 17.984375)
 texture = ExtResource("6_b6kvq")
 
-[connection signal="area_entered" from="Node2D2/Building1/Area2D" to="Node2D2/Building1/Area2D" method="OnAreaEntered"]
-[connection signal="area_exited" from="Node2D2/Building1/Area2D" to="Node2D2/Building1/Area2D" method="OnAreaExited"]
+[connection signal="area_entered" from="Node2D2/Building1/Entry" to="Node2D2/Building1/Entry" method="OnAreaEntered"]
+[connection signal="area_exited" from="Node2D2/Building1/Entry" to="Node2D2/Building1/Entry" method="OnAreaExited"]
+[connection signal="area_entered" from="Node2D2/Building4/Entry" to="Node2D2/Building4/Entry" method="OnAreaEntered"]
+[connection signal="area_exited" from="Node2D2/Building4/Entry" to="Node2D2/Building4/Entry" method="OnAreaExited"]
